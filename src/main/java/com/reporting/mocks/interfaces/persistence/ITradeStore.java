@@ -3,6 +3,7 @@ package com.reporting.mocks.interfaces.persistence;
 import com.reporting.mocks.model.DataMarkerType;
 import com.reporting.mocks.model.PricingGroup;
 import com.reporting.mocks.model.TradePopulation;
+import com.reporting.mocks.model.TradePopulationMutable;
 import com.reporting.mocks.model.id.TradePopulationId;
 import com.reporting.mocks.model.trade.Tcn;
 import com.reporting.mocks.model.trade.Trade;
