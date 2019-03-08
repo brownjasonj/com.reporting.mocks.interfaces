@@ -3,6 +3,7 @@ package com.reporting.mocks.interfaces.publishing;
 import com.reporting.mocks.model.*;
 
 public interface IResultPublisher {
+    void init(IResultPublisherConfiguration config);
     void publish(CalculationContext calculationContext);
     void publish(MarketEnv marketEnv);
     void publishIntradayRiskResultSet(RiskResultSet riskResultSet);
