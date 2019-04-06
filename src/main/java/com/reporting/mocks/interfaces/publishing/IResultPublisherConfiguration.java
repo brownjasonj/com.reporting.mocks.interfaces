@@ -6,4 +6,10 @@ public interface IResultPublisherConfiguration {
     String getCalculationContextTopic();
     String getIntradayTradeTopic();
     String getMarketEnvTopic();
+    String getCalculationContextDataSetName();
+    String getMarketEnvDataSetName();
+    String getRiskResultDataSetName();
+    String getRiskResultSetDataSetName();
+    String getTradePopulationDataSetName();
+    String getTradeDataSetName();
 }
