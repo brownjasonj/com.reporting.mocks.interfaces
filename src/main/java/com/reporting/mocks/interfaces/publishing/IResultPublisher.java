@@ -9,5 +9,8 @@ public interface IResultPublisher {
     void publishIntradayRiskResultSet(RiskResultSet riskResultSet);
     void publishIntradayRiskResult(RiskResult<? extends Risk> riskResult);
     void publishIntradayTrade(TradeLifecycle tradeLifecycle);
-    void publishEndofDayRiskRun(RiskResultSet riskResultSet);
+    void publishEndOfDayRiskResultSet(RiskResultSet riskResultSet);
+    void publishEndOfDayRiskResult(RiskResult<? extends Risk> riskResult);
+    void publishStartOfDayRiskResultSet(RiskResultSet riskResultSet);
+    void publishStartOfDayRiskResult(RiskResult<? extends Risk> riskResult);
 }
