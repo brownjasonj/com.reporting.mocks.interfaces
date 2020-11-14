@@ -15,6 +15,7 @@ public interface ICalculationContextStore {
     CalculationContext setCurrentContext(CalculationContext calculationContext);
     CalculationContext getCurrentContext();
     CalculationContext getCalculationContextById(CalculationContextId calculationContextId);
+    CalculationContext getPreviousContext();
 
     CalculationContext get(UUID id);
 
