@@ -29,7 +29,9 @@ public interface ITradeStore {
 
     TradePopulationMutable create(DataMarkerType type);
 
-    TradePopulation getTradePopulation(TradePopulationId id);
+    TradePopulation getTradePopulationById(TradePopulationId id);
+
+    TradePopulation getCurrentTradePopulation();
 
     Collection<TradePopulation> getAllTradePopulation();
 

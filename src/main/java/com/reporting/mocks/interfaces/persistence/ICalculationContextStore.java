@@ -2,6 +2,7 @@ package com.reporting.mocks.interfaces.persistence;
 
 import com.reporting.mocks.model.CalculationContext;
 import com.reporting.mocks.model.PricingGroup;
+import com.reporting.mocks.model.id.CalculationContextId;
 
 import java.util.Collection;
 import java.util.UUID;
@@ -13,6 +14,7 @@ public interface ICalculationContextStore {
 
     CalculationContext setCurrentContext(CalculationContext calculationContext);
     CalculationContext getCurrentContext();
+    CalculationContext getCalculationContextById(CalculationContextId calculationContextId);
 
     CalculationContext get(UUID id);
 
