@@ -2,12 +2,7 @@ package com.reporting.mocks.interfaces.persistence;
 
 import com.reporting.mocks.model.DataMarkerType;
 import com.reporting.mocks.model.PricingGroup;
-import com.reporting.mocks.model.TradePopulation;
-import com.reporting.mocks.model.TradePopulationMutable;
 import com.reporting.mocks.model.id.TradePopulationId;
-import com.reporting.mocks.model.trade.Tcn;
-import com.reporting.mocks.model.trade.Trade;
-import com.reporting.mocks.model.trade.TradeType;
 
 import java.util.Collection;
 import java.util.List;
@@ -15,25 +10,16 @@ import java.util.List;
 public interface ITradeStore {
     PricingGroup getPricingGroup();
 
-    Trade add(Trade trade);
+    ITradePopulation createSnapShot(DataMarkerType type);
 
-    Trade delete(Tcn tcn);
+    ITradePopulation getTradePopulationById(TradePopulationId id);
 
-    Trade modified(Trade originalTrade, Trade modifyTrade);
+    ITradePopulationLive getLiveTradePopulation();
 
-    Trade getTradeByTcn(Tcn tcn);
-
-    List<Trade> getByTradeType(TradeType tradeType);
-
-    Trade oneAtRandom();
-
-    TradePopulationMutable create(DataMarkerType type);
-
-    TradePopulation getTradePopulationById(TradePopulationId id);
-
-    TradePopulation getCurrentTradePopulation();
-
-    Collection<TradePopulation> getAllTradePopulation();
+    Collection<ITradePopulation> getAllTradePopulation();
 
     List<TradePopulationId> getTradePopulationsIds();
+
+    ITradePopulationReactive createReactiveSnapShot(DataMarkerType type);
+    ITradePopulationReactive getTradePopulationReactiveById(TradePopulationId id);
 }

@@ -6,7 +6,7 @@
 
   <groupId>com.reporting.mocks</groupId>
   <artifactId>interfaces</artifactId>
-  <version>0.17.0</version>
+  <version>0.18.0</version>
 
   <name>interfaces</name>
   <!-- FIXME change it to the project's website -->
@@ -16,7 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <mocks.version>0.17.0</mocks.version>
+    <mocks.version>0.18.0</mocks.version>
   </properties>
 
   <dependencies>
@@ -27,11 +27,27 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>io.projectreactor</groupId>
+      <artifactId>reactor-core</artifactId>
+    </dependency>
+    <dependency>
       <groupId>com.reporting.mocks</groupId>
       <artifactId>model</artifactId>
       <version>${mocks.version}</version>
     </dependency>
   </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.projectreactor</groupId>
+        <artifactId>reactor-bom</artifactId>
+        <version>Bismuth-RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
