@@ -14,7 +14,7 @@ public interface ITradeStore {
 
     ITradePopulation getTradePopulationById(TradePopulationId id);
 
-    ITradePopulationLive getLiveTradePopulation();
+    ITradePopulationLive getTradePopulationLive();
 
     Collection<ITradePopulation> getAllTradePopulation();
 
